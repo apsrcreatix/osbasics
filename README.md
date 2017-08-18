@@ -1,2 +1,2 @@
-# osbasics
-Learn about Operating System Using C
+# Operating System Basics
+Learn about Operating System basics Using C
