@@ -1,3 +1,9 @@
+/*
+*Name : Aditya Pratap Singh Rajput
+*Registration Number : RA1511008010237
+*Aim : To create a child process and establish communication between 
+parent and child usnig pipes.
+*/
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -6,8 +12,8 @@
 int main(){
 	int fd1[2],fd2[2],nbytes1,nbytes2;
 	pid_t childpid;
-	char string1[] = "How Are You ?\n";
-	char string2[] = "I am fine\n";
+	char string1[] = "How Are You ?\n";//message 1
+	char string2[] = "I am fine\n";//message 2
 	char readbuffer[80],readbuffer1[80];
 
 pipe(fd1);
