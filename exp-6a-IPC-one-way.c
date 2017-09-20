@@ -4,6 +4,7 @@
 *Aim : To create a child process and establish communication between 
 parent and child usnig pipes.
 */
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -11,10 +12,15 @@ parent and child usnig pipes.
 int main(void)
 {
         int     fd[2], nbytes;
+        /*pid_t data type is a signed integer type which is capable of representing a process ID. 
+	*header files needed : 
+                *unistd.h
+                *sys/types.h
+	*/       
         pid_t   childpid;
-        char    string[] = "Hello, world!\n";//message
+        char    string[] = "Hello, world!\n";
         char    readbuffer[80];
-
+//creating single pipe
         pipe(fd);
         
         if((childpid = fork()) == -1)
